@@ -1,0 +1,8 @@
+Soal 1 Poin G
+Dari test case pada point C dan point D, apakah struktur ERD yang dibentuk sudah optimal
+? berikan penjelasannya
+----------------------------------------------------------------------------------------
+
+--> kalau dilihat dari segi laporannya memang tidak perlu sendiri sendiri seperti contoh soal yang diberikan
+cukup jadi 1 untuk laporan terkait nama merchant, outlet dan omzet nya karena sama sama diakses untuk tiap user yang berbeda, 
+tapi untuk ERD yang diberikan sudah cukup optimal sehingga untuk implementasi di query bisa cukup baik
