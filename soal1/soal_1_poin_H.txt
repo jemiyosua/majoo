@@ -1,0 +1,12 @@
+Soal 1 Poin H
+Dokumen teknis Data Manipulation Language (DML)
+-----------------------------------------------
+
+1. select count(1) as cnt from Transactions a, Merchants b, Outlets c, Users d where a.merchant_id = b.id and a.outlet_id = c.id and b.user_id = d.id and b.user_id = 1 and b.id = c.merchant_id and a.created_at between '2021-11-01' and '2021-11-31';
+--> query diatas digunakan untuk mendapatkan total data yang di join dari tabel Transactions, Merchants, Outlets dan Users berdasarkan tanggal mulai dari 1 november 2021 sampai tanggal 30 november 2021, dan hanya user id 1 saja yang bisa melihat laporan nya
+
+2. select IFNULL(sum(bill_total), 0) as omzet from Transactions a, Merchants b, Outlets c, Users d where a.merchant_id = b.id and a.outlet_id = c.id and b.user_id = d.id and b.user_id = 1 and b.id = c.merchant_id and a.created_at between '2021-11-01' and '2021-11-31';
+--> query diatas digunakan untuk mendapatkan total bill (omzet) yang di join dari tabel Transactions, Merchants, Outlets dan Users berdasarkan tanggal mulai dari 1 november 2021 sampai tanggal 30 november 2021, dan hanya user id 1 saja yang bisa melihat laporan nya
+
+3. select b.merchant_name, c.outlet_name from Transactions a, Merchants b, Outlets c, Users d where a.merchant_id = b.id and a.outlet_id = c.id and b.user_id = d.id and b.user_id = 1 and b.id = c.merchant_id and a.created_at between '2021-11-01' and '2021-11-31' LIMIT 0,5
+--> query diatas digunakan untuk menampilkan nama merchant dan nama outlet yang di join dari tabel Transactions, Merchants, Outlets dan Users berdasarkan tanggal mulai dari 1 november 2021 sampai tanggal 30 november 2021, dan hanya user id 1 saja yang bisa melihat laporan nya dengan pagging halaman 1 dimana setiap halaman berisi masing masing 5 data
